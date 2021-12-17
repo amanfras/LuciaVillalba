@@ -1,0 +1,6 @@
+.home{
+    display:grid;
+    grid-template-rows: [header-s] 300px [header-e content-s] 1fr [content-e footer-s] 300px [footer-e];
+    grid-column: 1/-1;
+}
+

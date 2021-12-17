@@ -1,0 +1,29 @@
+.header{
+    grid-row: header-s/header-e;
+
+    display:grid;
+    grid-template-rows: [img-s] 200px [img-e navbar-s] 60px [navbar-e space-s] 40px [space-e];
+
+    &__img{
+        grid-row: img-s/img-e;
+        grid-column: 1/-1;
+        
+        
+        justify-self: center;
+    }
+
+    &__navbar{
+        grid-row: navbar-s/navbar-e;
+        grid-column: 1/-1;
+        background-color: rgb(246, 246, 246);
+        display: grid;
+        grid-template-rows:[s] 1fr [e];
+        align-items: center;
+        justify-content: space-evenly;
+
+        &>* {
+            grid-row: s/e;
+        }
+    }
+}
+
