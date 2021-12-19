@@ -1,5 +1,6 @@
 .header{
     grid-row: header-s/header-e;
+    grid-column: 1/-1;
 
     display:grid;
     grid-template-rows: [img-s] 200px [img-e navbar-s] 60px [navbar-e space-s] 40px [space-e];
@@ -24,6 +25,14 @@
         &>* {
             grid-row: s/e;
         }
+
+        a:hover{
+            cursor: pointer;
+        }
+    }
+
+    .orange-text {
+        color: rgb(255, 123, 0) !important;
     }
 }
 

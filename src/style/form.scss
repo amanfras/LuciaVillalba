@@ -1,0 +1,73 @@
+.form{
+    grid-column: form-s/form-e;
+    display: grid;
+    grid-row-gap: 6.5px;
+    grid-template-rows: [name-s] 64px [name-e email-s] 64px [email-e message-s] 220px [message-e button-s] 64px [button-e];
+
+    &__name{
+        grid-row: name-s/name-e;
+        input{
+            box-sizing: border-box;
+            height: 45px;
+            width: 475px;
+            border: 1px solid #E6E6E6;
+            color: rgb(94, 94, 94);
+            border-radius: 5px;
+            padding-left: 20px;
+            align-self: end;
+        }
+    }
+
+    &__email{
+        grid-row: email-s/email-e;
+        input{
+            box-sizing: border-box;
+            height: 45px;
+            width: 475px;
+            border: 1px solid #E6E6E6;
+            color: rgb(94, 94, 94);
+            border-radius: 5px;
+            padding-left: 20px;
+        }
+    }
+
+    &__message{
+        grid-row: message-s/message-e;
+        textarea{
+            box-sizing: border-box;
+            height: 200px;
+            width: 475px;
+            border: 1px solid #E6E6E6;
+            color: rgb(94, 94, 94);
+            border-radius: 5px;
+            padding: 20px;
+        }
+    }
+
+    &__button{
+        grid-row: button-s/button-e;
+        input{
+            font-family: 'Lato', sans-serif;
+            box-sizing: border-box;
+            height: 45px;
+            width: 475px;
+            border: rgb(255, 123, 0);
+            color: black;
+            background-color: rgb(255, 123, 0);;
+            border-radius: 5px;
+            font-weight: 500;
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+
+        :hover{
+            cursor: pointer;
+        }
+        
+        :active{
+            box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
+            letter-spacing: 3px;
+            font-weight: 700;
+        }
+    }
+}

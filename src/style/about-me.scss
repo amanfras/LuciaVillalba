@@ -1,36 +1,32 @@
-.About-me__wrapper{
-    display: grid;
-    grid-template-rows: [header-s] 300px [header-e content-s] 1fr [content-e footer-s] 160px [footer-e]50px;
+.About-me{
+    grid-row: page-s/page-e;
     grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: minmax(20px, 150px) [content-s] 1fr [content-e space-s] minmax(10px, 60px) [space-e img-s] 1fr [image-e] minmax(20px, 150px);
+    grid-template-rows: [s] 1fr [e];
 
-    .About-me{
+    &__info{
+        grid-column: content-s/content-e;
+        grid-row: s/e;
+
+        margin-top: 30px;
+        margin-bottom: 30px;
+
         display: grid;
-        grid-template-columns: minmax(20px, 150px) [content-s] 1fr [content-e space-s] minmax(10px, 60px) [space-e img-s] 1fr [image-e] minmax(20px, 150px);
-        grid-template-rows: [s] 1fr [e];
-    
-        &__info{
-            grid-column: content-s/content-e;
-            grid-row: s/e;
+        justify-content: space-evenly;
 
-            margin-top: 30px;
-            margin-bottom: 30px;
+        
+        color: rgb(94, 94, 94);
+        letter-spacing: 1px;
+        line-height: 30px;
+        text-align: justify;
+        text-indent: 40px;
+    }
 
-            display: grid;
-            justify-content: space-evenly;
-
-            
-            color: rgb(94, 94, 94);
-            letter-spacing: 1px;
-            line-height: 30px;
-            text-align: justify;
-            text-indent: 40px;
-        }
-    
-        &__img{
-            grid-column: img-s/img-e;
-            grid-row: s/e;
-            justify-self: left;
-            width: 80%;
-        }
+    &__img{
+        grid-column: img-s/img-e;
+        grid-row: s/e;
+        justify-self: left;
+        width: 80%;
     }
 }

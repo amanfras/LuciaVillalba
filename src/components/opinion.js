@@ -1,13 +1,76 @@
 import React, { Component } from 'react';
-import Footer from './footer';
-import Header from './header';
 
-export default class Opinion extends Component {
+import { connect } from 'react-redux';
+import * as actions from '../actions';
+
+class Opinion extends Component {
+    componentDidMount() {
+        const headerLinks = [
+          {
+            _id: 0,
+            title: 'INICIO',
+            active: false,
+            path: '/'
+          },
+          {
+            _id: 1,
+            title: 'SERVICIOS',
+            active: false,
+            path: '/servicios'
+          },
+          {
+            _id: 2,
+            title: 'SOBRE MI',
+            active: false,
+            path: '/sobre-mi'
+            },
+          {
+          _id: 3,
+          title: 'BLOG',
+          active: false,
+          path: '/blog'
+          },
+          {
+          _id: 4,
+          title: 'CONTACTO',
+          active: false,
+          path: '/contacto'
+          },
+          {
+          _id: 5,
+          title: 'RESERVA',
+          active: false,
+          path: '/reserva'
+          }
+        ]
+    
+        const footerLinks = [
+          {
+            _id: 0,
+            title: 'POLÍTICA DE PRIVACIDAD',
+            active: false,
+            path: '/política-de-privacidad'
+          },
+          {
+            _id: 1,
+            title: 'OPINIONES',
+            active: true,
+            path: '/opiniones'
+          },
+          {
+            _id: 2,
+            title: 'RECOMENDACIONES',
+            active: false,
+            path: '/recomendaciones'
+          }
+        ]
+    
+        this.props.setHeaderLinks(headerLinks);
+        this.props.setFooterLinks(footerLinks);
+      }
+
     render() {
         return (
-            <div className='opinion__wrapper'>
-                {this.props.children}
-                <Header />
                 <div className='opinion'>
                     <div className='opinion__rating'>
                         <div className='opinion__rating__number'>
@@ -91,10 +154,16 @@ export default class Opinion extends Component {
                             </div>
                         </div>
                     </div>
-
-                </div>
-                <Footer />
             </div>
         );
     }
 }
+
+function mapStateToProps(state) {
+    const { headerLinks, footerLinks } = state.headerfooter;
+    return { headerLinks, footerLinks }
+  }
+  
+Opinion = connect(mapStateToProps, actions)(Opinion);
+
+export default Opinion;

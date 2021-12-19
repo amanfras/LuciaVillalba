@@ -1,6 +1,97 @@
 .home{
-    display:grid;
-    grid-template-rows: [header-s] 300px [header-e content-s] 1fr [content-e footer-s] 300px [footer-e];
+    grid-row: page-s/page-e;
     grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: minmax(20px, 150px) [content-s] 1fr [content-e] minmax(20px, 150px);
+    grid-template-rows: [top-s] 1fr [top-e info-s] 1fr [info-e conect-s] 200px [conect-e bottom-s] 400px [bottom-e];
+
+    &__top{
+        grid-column: content-s/content-e;
+        grid-row: top-s/top-e;
+        background-image: url(/assets/home.jpg);
+        height: 320px;
+
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+
+        h1{
+            background-color: rgb(255, 123, 0);
+            color: rgb(246, 246, 246);
+            width: 300px;
+            border-radius: 5px;
+            font-size: 30px;
+            text-align: center;
+            margin: 30px;
+            padding: 15px;
+        }
+    }
+
+    &__info{
+        grid-column: content-s/content-e;
+        grid-row: info-s/info-e;
+        margin-top: 20px;
+        margin-left: 100px;
+        margin-right: 100px;
+
+        p{
+            color: rgb(94, 94, 94);
+            letter-spacing: 1px;
+            line-height: 30px;
+            text-align: center;
+            font-weight: 600;
+
+            span{
+                color: rgb(255, 123, 0);
+                font-weight: 800;
+            }
+        }
+        
+    }
+
+    &__conectate{
+        grid-column: content-s/content-e;
+        grid-row: conect-s/conect-e;
+        margin-top: 50px;
+        display: grid;
+        justify-content: center;
+
+        &__icons{
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        p{
+            color: rgb(94, 94, 94);
+            letter-spacing: 1px;
+            line-height: 30px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        a{
+            color: rgb(255, 123, 0);
+            font-size: 4em;
+            font-weight: 400;
+            text-align: center;
+        }
+    }
+
+    &__map{
+        margin-top: 80px;
+        grid-column: content-s/content-e;
+        grid-row: bottom-s/bottom-e;
+
+        iframe{
+            height: 100%;
+            width: 100%;
+            border: 0;
+        }
+        
+    }
 }
+
 

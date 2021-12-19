@@ -1,42 +1,38 @@
-.privacy_wrapper{
-    display: grid;
-    grid-template-rows: [header-s] 300px [header-e content-s] 1fr [content-e footer-s] 160px [footer-e]50px;
+.privacy{
+    grid-row: page-s/page-e;
     grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: minmax(20px, 150px) [content-s] 1fr [content-e] minmax(20px, 150px);
+    grid-template-rows: [s] 1fr [e];
 
-    .privacy{
+    &__title{
+        grid-column: content-s/content-e;
+        grid-row: s/e;
+
+        color: rgb(255, 123, 0);
+        font-size: 20px;
+        text-decoration: underline;
+    }
+
+    &__text{
+        grid-column: content-s/content-e;
+        grid-row: s/e;
+
+        margin-top: 30px;
+        margin-bottom: 30px;
+
         display: grid;
-        grid-template-columns: minmax(20px, 150px) [content-s] 1fr [content-e] minmax(20px, 150px);
-        grid-template-rows: [s] 1fr [e];
-    
-        &__title{
-            grid-column: content-s/content-e;
-            grid-row: s/e;
+        justify-content: space-evenly;
 
-            color: rgb(255, 123, 0);
-            font-size: 20px;
-            text-decoration: underline;
-        }
-    
-        &__text{
-            grid-column: content-s/content-e;
-            grid-row: s/e;
-
-            margin-top: 30px;
-            margin-bottom: 30px;
-
-            display: grid;
-            justify-content: space-evenly;
-
-            
-            color: rgb(94, 94, 94);
-            letter-spacing: 1px;
-            line-height: 30px;
-            text-align: justify;
-            text-indent: 40px;
-            
-            .none{
-                text-indent: 0px;
-            }
+        
+        color: rgb(94, 94, 94);
+        letter-spacing: 1px;
+        line-height: 30px;
+        text-align: justify;
+        text-indent: 40px;
+        
+        .none{
+            text-indent: 0px;
         }
     }
 }

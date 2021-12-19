@@ -8,10 +8,13 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
-@import './home.scss';
-@import './header.scss';
-@import './about-me.scss';
-@import './footer.scss';
+@import './layout';
+@import './header';
+@import './footer';
+@import './home';
+@import './about-me';
 @import './privacy';
 @import './service';
 @import './opinion';
+@import './contact';
+@import './form';

@@ -1,0 +1,58 @@
+.contact{
+    grid-row: page-s/page-e;
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-rows: [title-s] 120px [title-e form_w-s] 1fr [form_w-e]30px;
+    grid-template-columns: minmax(20px, 150px) [content-s] 1fr [content-e] minmax(20px, 150px);
+    
+    &__title{
+        grid-row: title-s/title-e;
+        grid-column: content-s/content-e;
+        color: rgb(255, 123, 0);
+        text-decoration: underline;
+        font-weight: 800;
+        letter-spacing: 1px;
+        align-self: center;
+    }
+
+    &__part{
+        grid-row: form_w-s/form_w-e;
+        grid-column: content-s/content-e;
+        display: grid;
+        grid-template-columns: [form-s] 1fr [form-e gap-s] 20px [gap-e info-s] 1fr [info-e];
+        
+        &__form{
+            grid-column: form-s/form-e;
+        }
+
+        &__info{
+            grid-column: info-s/info-e;
+            display: grid;
+            grid-row-gap: 5px;
+
+            color: rgb(94, 94, 94);
+            letter-spacing: 1px;
+            text-align: justify;
+            font-size: 15px;
+
+            &__name{
+                color: rgb(255, 123, 0);
+                font-weight: 800;
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+
+            i{
+                color: rgb(255, 123, 0);
+                margin-right: 15px;
+            }
+
+            &__horario{
+                display: grid;
+                text-indent: 30px;
+                line-height: 0px;
+            }
+        }
+    
+    }
+}
