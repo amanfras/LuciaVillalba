@@ -1,0 +1,106 @@
+.Blog{
+    grid-row: page-s/page-e;
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: minmax(20px, 200px) [content-s] 1fr [content-e] minmax(20px, 200px);
+    grid-template-rows: 40px [blog-s] 1fr [blog-e]40px;
+
+    &__wrapper{
+        grid-row: blog-s/blog-e;
+        grid-column: content-s/content-e;
+        display: flex;
+        flex-flow: row-reverse wrap-reverse;
+        align-content: space-between; 
+        column-gap: 15px;
+        row-gap: 30px;
+
+        .blog{
+            width: 47%;
+            display: grid;
+            grid-template-rows: [imagen-s] 350px [imagen-e fecha-s] 50px [fecha-e title-s] 70px [title-e contenido-s] 1fr [contenido-e delete-s] 45px [delete-e];
+            grid-column: s e;
+            border: 2px solid rgb(246, 246, 246);
+
+            i{
+                grid-row: delete-s/delete-e;
+                grid-column: s/e;
+                color: rgb(255, 123, 0);
+                cursor: pointer;
+                font-size: 2rem;
+                justify-self: center;
+                align-self: center;
+            }
+            
+            &__image{
+                grid-row: imagen-s/imagen-e;
+                grid-column: s/e;
+                width: 100%; 
+                height: 350px;
+                object-fit: cover;
+            }
+
+            &__fecha{
+                align-self: center;
+                margin-top: 10px;
+                margin-left: 10px;
+                margin-right: 10px;
+                grid-row: fecha-s/fecha-e;
+                grid-column: s/e;
+                color: rgb(94, 94, 94);
+                font-weight: 600;
+                letter-spacing: 1px;
+                font-size: 1.2rem;
+            }
+
+            &__title{
+                margin-left: 10px;
+                margin-right: 10px;
+                grid-row: title-s/title-e;
+                grid-column: s/e;
+                align-self: center;
+                .link{
+                    color: rgb(255, 123, 0);
+                    font-weight: 800;
+                    font-size: 1.3rem;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                }
+            }
+
+            &__content{
+                margin-left: 10px;
+                margin-right: 10px;
+                grid-row: contenido-s/contenido-e;
+                grid-column: s/e;
+                color: rgb(94, 94, 94);
+                line-height: 30px;
+                text-align: justify;
+                .link{
+                    color: rgb(255, 123, 0);
+                    cursor: pointer;
+                }
+            }
+
+            
+        }
+        .blog:hover{
+            box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+    }
+}
+
+@media (max-width:1000px){
+    .Blog{
+        grid-template-columns: 20px [content-s] 1fr [content-e] 20px;
+        &__wrapper{
+            display: grid;
+            grid-template-columns: 1fr;
+
+            .blog{
+                justify-self: center;
+                width: 100%;
+            }
+        }
+    }
+}

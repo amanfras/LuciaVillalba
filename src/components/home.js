@@ -36,12 +36,6 @@ class Home extends Component {
       title: 'CONTACTO',
       active: false,
       path: '/contacto'
-      },
-      {
-      _id: 5,
-      title: 'RESERVA',
-      active: false,
-      path: '/reserva'
       }
     ]
 
@@ -57,18 +51,13 @@ class Home extends Component {
         title: 'OPINIONES',
         active: false,
         path: '/opiniones'
-      },
-      {
-        _id: 2,
-        title: 'RECOMENDACIONES',
-        active: false,
-        path: '/recomendaciones'
       }
     ]
 
     this.props.setHeaderLinks(headerLinks);
     this.props.setFooterLinks(footerLinks);
   }
+
 
   render() {
     return (
@@ -104,7 +93,7 @@ class Home extends Component {
 
 function mapStateToProps(state) {
   const { headerLinks, footerLinks } = state.headerfooter;
-  return { headerLinks, footerLinks }
+  return { headerLinks, footerLinks}
 }
 
 Home = connect(mapStateToProps, actions)(Home);

@@ -7,26 +7,7 @@ import {
 
 const INITIAL_STATE = {
     headerLinks: [],
-    footerLinks: [
-        {
-          _id: 0,
-          title: 'POLÍTICA DE PRIVACIDAD',
-          active: false,
-          path: '/política-de-privacidad'
-        },
-        {
-          _id: 1,
-          title: 'OPINIONES',
-          active: false,
-          path: '/opiniones'
-        },
-        {
-          _id: 2,
-          title: 'RECOMENDACIONES',
-          active: false,
-          path: '/recomendaciones'
-        }
-      ],
+    footerLinks: [],
     onClick: ''
 }
 

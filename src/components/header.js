@@ -4,8 +4,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 import history from '../history';
 
-class Header extends Component { 
-
+class Header extends Component {     
     handleOnClick = (link) => {
         this.props.changeHeaderActive(link._id)
         if(this.props.onClick) {
@@ -18,7 +17,7 @@ class Header extends Component {
         return (
             <div className='header'>
                 <img className='header__img' src="/assets/Logo.png"/>
-                
+                {this.props.log.loggedInStatus === true ? <i className='header__logout' class="fas fa-sign-out-alt" onClick={this.props.changeAuthOut}></i>: null}
                 <div className='header__navbar'>
                     {
                         this.props.headerLinks.map((link, index) => {
@@ -37,9 +36,11 @@ class Header extends Component {
 
 function mapStateToProps(state) {
     const{ headerLinks, onClick } = state.headerfooter;
+    const log = state.auth
     return {
         headerLinks,
-        onClick
+        onClick,
+        log
     }
 }
 

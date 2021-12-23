@@ -1,8 +1,9 @@
 .contact{
+    margin-top: 50px;
     grid-row: page-s/page-e;
     grid-column: 1/-1;
     display: grid;
-    grid-template-rows: [title-s] 120px [title-e form_w-s] 1fr [form_w-e]30px;
+    grid-template-rows: [title-s] 50px [title-e form_w-s] 1fr [form_w-e]30px;
     grid-template-columns: minmax(20px, 150px) [content-s] 1fr [content-e] minmax(20px, 150px);
     
     &__title{
@@ -13,6 +14,7 @@
         font-weight: 800;
         letter-spacing: 1px;
         align-self: center;
+        margin-bottom: 20px;
     }
 
     &__part{
@@ -54,5 +56,17 @@
             }
         }
     
+    }
+}
+
+@media (max-width:850px){
+    .contact{
+        grid-template-columns: 20px [content-s] 1fr [content-e] 20px;
+        &__part{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
     }
 }

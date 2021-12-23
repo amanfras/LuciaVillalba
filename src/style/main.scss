@@ -8,6 +8,12 @@ body {
     -webkit-tap-highlight-color: transparent;
 }
 
+@media (max-width:640px){
+    body{
+        font-size: 14px;
+    }
+}
+
 @import './layout';
 @import './header';
 @import './footer';
@@ -18,3 +24,6 @@ body {
 @import './opinion';
 @import './contact';
 @import './form';
+@import './login';
+@import './bloginfo';
+@import './blog';

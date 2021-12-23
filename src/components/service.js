@@ -36,12 +36,6 @@ class Service extends Component {
               title: 'CONTACTO',
               active: false,
               path: '/contacto'
-              },
-              {
-              _id: 5,
-              title: 'RESERVA',
-              active: false,
-              path: '/reserva'
               }
           ]
     
@@ -57,12 +51,6 @@ class Service extends Component {
               title: 'OPINIONES',
               active: false,
               path: '/opiniones'
-            },
-            {
-              _id: 2,
-              title: 'RECOMENDACIONES',
-              active: false,
-              path: '/recomendaciones'
             }
         ]
       
@@ -97,10 +85,14 @@ class Service extends Component {
                             La alimentación de tu bebé va a depender de tu alimentación. Durante el embarazo se producen numerosos cambios en el cuerpo y cambian los requerimientos nutricionales. Necesitas asegurar que tu bebé esta bien alimentado, y asegurar su correcto desarrollo, siempre manteniendo un peso adecuado.
                         </p>
                     </div>
-                    <img className='service__type__img' src="/assets/embarazo.jfif"/>
+                    <div className='service__type__img'>
+                        <img src="/assets/embarazo.jfif"/>
+                    </div>
                 </div>
                 <div className='service__type'>
-                    <img className='service__type__img' src="/assets/saludable.jfif"/>
+                    <div className='service__type__img'>
+                        <img src="/assets/saludable.jfif"/>
+                    </div>
                     <div className='service__type_info'>
                         <div className='title'>
                             Alimentación saludable
@@ -128,10 +120,14 @@ class Service extends Component {
                             </ul>
                         </div>
                     </div>
-                    <img className='service__type__img' src="/assets/dietoterapia.jfif"/>
+                    <div className='service__type__img'>
+                        <img src="/assets/dietoterapia.jfif"/>
+                    </div>
                 </div>
                 <div className='service__type'>
-                    <img className='service__type__img' src="/assets/infantil.jfif"/>
+                    <div className='service__type__img'>
+                        <img src="/assets/infantil.jfif"/>
+                    </div>
                     <div className='service__type_info'>
                         <div className='title'>
                             Alimentación Infantil

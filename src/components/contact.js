@@ -36,12 +36,6 @@ class Contact extends Component {
           title: 'CONTACTO',
           active: false,
           path: '/contacto'
-          },
-          {
-          _id: 5,
-          title: 'RESERVA',
-          active: false,
-          path: '/reserva'
           }
         ]
     
@@ -57,12 +51,6 @@ class Contact extends Component {
             title: 'OPINIONES',
             active: false,
             path: '/opiniones'
-          },
-          {
-            _id: 2,
-            title: 'RECOMENDACIONES',
-            active: false,
-            path: '/recomendaciones'
           }
         ]
     

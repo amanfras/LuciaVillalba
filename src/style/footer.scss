@@ -3,7 +3,7 @@
 
     display:grid;
     grid-template-rows: [space1-s] 100px [space1-e navbar-s] 60px [navbar-e copyright-s] 20px [copyright-e];
-    grid-template-columns: minmax(20px, 150px) [s] 1fr [e] minmax(20px, 150px);
+    grid-template-columns: minmax(10px, 150px) [s] 1fr [e] minmax(10px, 150px);
 
     &__space{
         grid-row: space1-s/pace1-e;
@@ -45,3 +45,12 @@
     }
 }
 
+@media (max-width:650px){
+    .footer{
+        grid-template-columns: [s] 1fr [e];
+
+        &__copyright{
+            font-size: 8px;
+        }
+    }
+}

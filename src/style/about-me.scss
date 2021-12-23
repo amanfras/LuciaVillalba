@@ -1,4 +1,5 @@
 .About-me{
+    margin-top: 50px;
     grid-row: page-s/page-e;
     grid-column: 1/-1;
     display: grid;
@@ -24,9 +25,32 @@
     }
 
     &__img{
+        margin-top: 35px;
         grid-column: img-s/img-e;
         grid-row: s/e;
         justify-self: left;
         width: 80%;
+    }
+}
+
+@media (max-width:900px){
+    .About-me{
+        grid-template-columns: 20px [st] 1fr [en] 20px;
+        grid-template-rows: [img-s] 300px [im-e info-s] 1fr [info-e];
+
+        &__info{
+            grid-column: st/en;
+            grid-row: info-s/info-e;
+        }
+
+        &__img{
+            margin-top: 5px;
+            grid-column: st/en;
+            grid-row: img-s/img-e;
+            height: 300px;
+            width: auto;
+            object-fit: cover;
+            justify-self: center;
+        }
     }
 }

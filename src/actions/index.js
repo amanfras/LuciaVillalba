@@ -5,9 +5,16 @@ import {
     changeFooterActive
 } from './headerfooter';
 
+import{
+    changeAuthOut,
+    changeAuthIn
+} from './auth';
+
 export {
     setHeaderLinks,
     setFooterLinks,
     changeHeaderActive,
-    changeFooterActive
+    changeFooterActive,
+    changeAuthIn,
+    changeAuthOut
 };

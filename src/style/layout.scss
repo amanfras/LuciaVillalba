@@ -1,5 +1,11 @@
 .layout{
     display:grid;
-    grid-template-rows: [header-s] 300px [header-e page-s] 1fr [page-e footer-s] 300px [footer-e];
+    grid-template-rows: 30px[header-s] 300px [header-e page-s] 1fr [page-e footer-s] 300px [footer-e];
     grid-template-columns: 1/-1 ;
+}
+
+@media (max-width:650px){
+    .layout{
+        grid-template-rows: 30px[header-s] 200px [header-e page-s] 1fr [page-e footer-s] 300px [footer-e];
+    }
 }

@@ -3,13 +3,11 @@
     grid-column: 1/-1;
 
     display:grid;
-    grid-template-rows: [img-s] 200px [img-e navbar-s] 60px [navbar-e space-s] 40px [space-e];
+    grid-template-rows: [img-s] 200px [img-e logout-s]37px[logout-e navbar-s] 60px [navbar-e space-s] 40px [space-e];
 
     &__img{
         grid-row: img-s/img-e;
-        grid-column: 1/-1;
-        
-        
+        grid-column: 1/-1;      
         justify-self: center;
     }
 
@@ -34,5 +32,22 @@
     .orange-text {
         color: rgb(255, 123, 0) !important;
     }
+
+    i{
+        grid-row: logout-s/logout-e;
+        font-size: 2em;
+        align-self: center;
+        justify-self: center;
+        color: rgb(255, 123, 0);
+        margin-bottom: 30px;
+    }
 }
 
+@media (max-width:650px){
+    img{
+        height: 80px;
+    }
+    .header{
+        grid-template-rows: [img-s] 100px [img-e logout-s]37px[logout-e navbar-s] 60px [navbar-e space-s] 40px [space-e];
+    }
+}

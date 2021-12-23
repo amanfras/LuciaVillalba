@@ -9,7 +9,7 @@
         input{
             box-sizing: border-box;
             height: 45px;
-            width: 475px;
+            width: 80%;
             border: 1px solid #E6E6E6;
             color: rgb(94, 94, 94);
             border-radius: 5px;
@@ -23,7 +23,7 @@
         input{
             box-sizing: border-box;
             height: 45px;
-            width: 475px;
+            width: 80%;
             border: 1px solid #E6E6E6;
             color: rgb(94, 94, 94);
             border-radius: 5px;
@@ -36,7 +36,7 @@
         textarea{
             box-sizing: border-box;
             height: 200px;
-            width: 475px;
+            width: 80%;
             border: 1px solid #E6E6E6;
             color: rgb(94, 94, 94);
             border-radius: 5px;
@@ -50,7 +50,7 @@
             font-family: 'Lato', sans-serif;
             box-sizing: border-box;
             height: 45px;
-            width: 475px;
+            width: 80%;
             border: rgb(255, 123, 0);
             color: black;
             background-color: rgb(255, 123, 0);;
@@ -68,6 +68,14 @@
             box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.4);
             letter-spacing: 3px;
             font-weight: 700;
+        }
+    }
+}
+
+@media (max-width:850px){
+    .form{
+        input, textarea{
+            width: 80vw;
         }
     }
 }

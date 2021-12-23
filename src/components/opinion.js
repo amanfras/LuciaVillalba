@@ -35,12 +35,6 @@ class Opinion extends Component {
           title: 'CONTACTO',
           active: false,
           path: '/contacto'
-          },
-          {
-          _id: 5,
-          title: 'RESERVA',
-          active: false,
-          path: '/reserva'
           }
         ]
     
@@ -56,12 +50,6 @@ class Opinion extends Component {
             title: 'OPINIONES',
             active: true,
             path: '/opiniones'
-          },
-          {
-            _id: 2,
-            title: 'RECOMENDACIONES',
-            active: false,
-            path: '/recomendaciones'
           }
         ]
     

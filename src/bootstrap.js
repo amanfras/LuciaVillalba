@@ -19,9 +19,9 @@ import Privacy from "./components/privacy";
 import Service from "./components/service";
 import Opinion from "./components/opinion";
 import Contact from "./components/contact";
-import Reserva from "./components/reserva";
 import Blog from "./components/blog";
-import Recomendaciones from "./components/recomendaciones";
+import LogIn from "./components/login";
+import BlogInfo from "./components/bloginfo";
 
 
 function main() {
@@ -36,9 +36,9 @@ function main() {
             <Route path='/servicios' exact component={Service}/>
             <Route path='/opiniones' exact component={Opinion}/>
             <Route path='/contacto' exact component={Contact}/>
-            <Route path='/reserva' exact component={Reserva}/>
             <Route path='/blog' exact component={Blog}/>
-            <Route path='/recomendaciones' exact component={Recomendaciones}/>
+            <Route path='/login' exact component={LogIn }/>
+            <Route path="/blog/:slug" component={BlogInfo}/>
           </Switch>
         </Layout>
       </Router>
